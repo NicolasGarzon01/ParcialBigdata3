@@ -1,0 +1,19 @@
+{
+  "dev": {
+    "app_function": "descargar_y_guardar_portadas.descargar_y_guardar_portadas",
+    "aws_region": "us-east-1",
+    "project_name": "headlines-scraper",
+    "runtime": "python3.10",
+    "s3_bucket": "zappa-headlines-noticiass",
+    "manage_roles": false,
+    "role_name": "LabRole",
+    "apigateway_enabled": false,
+    "keep_warm": false,
+    "events": [
+      {
+        "function": "descargar_y_guardar_portadas.descargar_y_guardar_portadas",
+        "expression": "cron(0 9 * * ? *)"
+      }
+    ]
+  }
+}
